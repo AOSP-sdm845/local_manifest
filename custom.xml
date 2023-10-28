@@ -23,11 +23,15 @@
 
   <remote name="pixel-gitlab"
           fetch="https://gitlab.pixelexperience.org/android"
-          revision="thirteen" />
+          revision="fourteen" />
 
   <remote name="pixel-devices"
           fetch="https://github.com/PixelExperience-Devices"
-          revision="thirteen" />
+          revision="fourteen" />
+
+  <remote name="pixel-devices-blobs"
+          fetch="https://gitlab.pixelexperience.org/android/vendor-blobs"
+          revision="fourteen" />
 
   <remote  name="derp"
            fetch="https://github.com/DerpFest-AOSP"
@@ -108,39 +112,23 @@
   <!-- System Repos -->
   <remove-project name="platform/system/bpf" />
   <remove-project name="platform/system/core" />
-  <remove-project name="platform/system/netd" />
   <remove-project name="platform/system/vold" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/system/sepolicy" />
-
-  <!-- CodeLinaro additions -->
-  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" groups="qcom,qssi" remote="lineage" />
-  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="android_vendor_qcom_opensource_audio-hal_st-hal" groups="qcom,lahaina" remote="lineage" />
-  <project path="vendor/qcom/opensource/audio-hal/st-hal-ar" name="android_vendor_qcom_opensource_audio-hal_st-hal-ar" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" groups="qcom,qssi" remote="lineage" />
-  <project path="vendor/qcom/opensource/commonsys/display" name="android_vendor_qcom_opensource_display-commonsys" groups="qcom,qssi" remote="lineage" />
-  <project path="vendor/qcom/opensource/core-utils-sys" name="android_vendor_qcom_opensource_core-utils-sys" groups="qcom,qssi" remote="lineage" />
-  <project path="vendor/qcom/opensource/core-utils-vendor" name="android_vendor_qcom_opensource_core-utils-vendor" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="lineage" />
-  <project path="vendor/qcom/opensource/healthd-ext" name="android_vendor_qcom_opensource_healthd-ext" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" groups="qcom,qssi" remote="lineage" />
-  <project path="vendor/qcom/opensource/libfmjni" name="android_vendor_qcom_opensource_libfmjni" groups="qcom" remote="lineage" />
-  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/usb" name="android_vendor_qcom_opensource_usb" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="vendor/qcom/opensource/wfd-commonsys" name="android_vendor_qcom_opensource_wfd-commonsys" groups="qcom,waipio-video" remote="lineage" />
-
-  <!-- NXP additions -->
-  <project path="vendor/nxp/nfc" name="android_vendor_nxp_nfc" groups="nxp" remote="lineage" />
-  <project path="vendor/nxp/secure_element" name="android_vendor_nxp_secure_element" groups="nxp" remote="lineage" />
-  <project path="vendor/nxp/secure_element_extns" name="android_vendor_nxp_secure_element_extns" groups="nxp" remote="lineage" />
 
   <!-- Device Repos -->
   <project path="device/custom/sepolicy" name="AOSP-sdm845/device_custom_sepolicy" revision="14" remote="github" />
   <project path="device/qcom/sepolicy" name="AOSP-sdm845/device_qcom_sepolicy" revision="14" remote="github" />
   <project path="device/qcom/sepolicy_vndr-legacy-um" name="AOSP-sdm845/device_qcom_sepolicy_vndr-legacy-um" revision="14" remote="github" />
+
+  <!-- External repos -->
+  <project path="external/ant-wireless/ant_client" name="external_ant-wireless_ant_client" remote="pixel" />
+  <project path="external/ant-wireless/ant_native" name="external_ant-wireless_ant_native" remote="pixel" />
+  <project path="external/ant-wireless/ant_service" name="external_ant-wireless_ant_service" remote="pixel" />
+  <project path="external/ant-wireless/hidl" name="external_ant-wireless_hidl" remote="pixel" />
+  <project path="external/cronet" name="external_cronet" remote="pixel" />
+  <project path="external/json-c" name="external_json-c" remote="pixel" />
+  <project path="external/tinyxml" name="external_tinyxml" remote="pixel" />
 
   <!-- General repos -->
   <project path="build/make" name="AOSP-sdm845/build" revision="14" remote="github">
@@ -159,55 +147,44 @@
   <project path="bionic" name="AOSP-sdm845/bionic" revision="14" remote="github" />
   <project path="vendor/aosp" name="AOSP-sdm845/vendor_aosp" revision="14" remote="github" />
 
-  <!-- External repos -->
-  <project path="external/ant-wireless/ant_client" name="android_external_ant-wireless_ant_client" groups="qcom,sdm660" remote="lineage" />
-  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" groups="qcom,sdm660" remote="lineage" />
-  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" groups="qcom,sdm660" remote="lineage" />
-  <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" groups="qcom,qssi" remote="lineage" />
-  <project path="external/cronet" name="external_cronet" remote="evo-gitlab" />
-  <project path="external/external_ntfs-3g" name="AOSP-11/external_ntfs-3g" revision="11" remote="github" />
-  <project path="external/json-c" name="android_external_json-c" groups="qcom,qssi" remote="lineage" />
-
   <!-- Hardware repos -->
   <project path="hardware/custom/interfaces" name="AOSP-sdm845/hardware_custom_interfaces" revision="14" remote="github" />
   <project path="hardware/interfaces" name="AOSP-sdm845/hardware_interfaces" revision="14" remote="github" />
   <project path="hardware/libhardware" name="AOSP-sdm845/hardware_libhardware" revision="14" remote="github" />
   <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
-  <!--<project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="evo" />-->
-  <project path="hardware/qcom-caf/common" name="LineageOS/android_hardware_qcom-caf_common" groups="qcom" revision="lineage-20.0" remote="github">
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="pixel">
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- for AOSP sdm845, we override os_pickup.mk -->
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
     <!-- add guards for CAF repositories -->
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
     <!-- add guards for Pixel kernel modules -->
     <linkfile src="os_pickup.bp" dest="kernel/google/gs101/private/google-modules/Android.bp" />
     <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
   </project>
-  <project path="hardware/qcom-caf/sdm845/audio" name="AOSP-sdm845/android_hardware_qcom_audio" groups="qcom,sdm845" revision="14" remote="github" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="AOSP-sdm845/hardware_qcom-caf_sdm845_audio" groups="qcom,sdm845" revision="14" remote="github" />
   <project path="hardware/qcom-caf/sdm845/display" name="AOSP-sdm845/hardware_qcom-caf_sdm845_display" groups="qcom,sdm845" revision="14" remote="github" />
-  <project path="hardware/qcom-caf/sdm845/media" name="AOSP-sdm845/android_hardware_qcom_media" groups="qcom,sdm845" revision="14" remote="github" />
-  <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,waipio-vendor" revision="lineage-20.0-caf" remote="lineage" />
-  <project path="hardware/qcom-caf/bt" name="android_hardware_qcom_bt" groups="qcom,legacy-qcom" revision="lineage-20.0-caf" remote="lineage" />
-  <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" groups="qcom,waipio-vendor" remote="lineage" />
-  <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" groups="qcom,sdm660" remote="lineage" />
-  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="evo" />
+  <project path="hardware/qcom-caf/sdm845/media" name="AOSP-sdm845/hardware_qcom-caf_sdm845_media" groups="qcom,sdm845" revision="14" remote="github" />
+  <project path="hardware/qcom-caf/bootctrl" name="hardware_qcom-caf_bootctrl" remote="pixel" />
+  <project path="hardware/qcom-caf/thermal" name="hardware_qcom-caf_thermal" remote="pixel" />
+  <project path="hardware/qcom-caf/vr" name="hardware_qcom-caf_vr" remote="pixel" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="pixel" />
 
   <!-- Framework repos -->
   <project path="frameworks/base" name="AOSP-sdm845/frameworks_base" revision="14" remote="github" />
   <project path="frameworks/native" name="AOSP-sdm845/frameworks_native" revision="14" remote="github" />
 
   <!-- Prebuilts Repos -->
+  <project path="prebuilts/extract-tools" name="prebuilts_extract-tools" remote="pixel" clone-depth="1" />
+  <project path="prebuilts/tools-custom" name="prebuilts_tools-custom" remote="pixel" clone-depth="1" />
+  <project path="prebuilts/clang/kernel/linux-x86/clang-r416183b" name="prebuilts_clang_kernel_linux-x86_clang-r416183b" remote="pixel" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" revision="lineage-19.1" remote="lineage" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" revision="lineage-19.1" remote="lineage" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" revision="lineage-19.1" remote="lineage" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" revision="lineage-19.1" remote="lineage" clone-depth="1" />
-  <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" remote="lineage" clone-depth="1" />
-  <project path="prebuilts/tools-custom" name="android_prebuilts_tools-lineage" remote="lineage" clone-depth="1" />
+  <project path="prebuilts/kernel-build-tools" name="prebuilts_kernel-build-tools" remote="pixel" clone-depth="1" />
 
   <!-- Packages repos -->
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
@@ -219,21 +196,30 @@
   <project path="system/security" name="AOSP-sdm845/system_security" revision="14" remote="github" />
   <project path="system/sepolicy" name="AOSP-sdm845/system_sepolicy" revision="14" remote="github" />
 
-  <!-- Vendor repos - NXP -->
-  <!--<project path="vendor/nxp/nfc" name="PixelExperience/vendor_nxp_nfc" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/interfaces/nfc" name="PixelExperience/vendor_nxp_opensource_interfaces_nfc" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="PixelExperience/vendor_nxp_opensource_commonsys_external_libnfc-nci" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/commonsys/frameworks" name="PixelExperience/vendor_nxp_opensource_commonsys_frameworks" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="PixelExperience/vendor_nxp_opensource_commonsys_packages_apps_Nfc" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="PixelExperience/vendor_nxp_opensource_pn5xx_halimpl" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="PixelExperience/vendor_nxp_opensource_pn5xx_hidlimpl" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/sn100x/halimpl" name="PixelExperience/vendor_nxp_opensource_sn100x_halimpl" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="PixelExperience/vendor_nxp_opensource_sn100x_hidlimpl" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/secure_element" name="PixelExperience/vendor_nxp_secure_element" revision="thirteen" remote="github" />
-  <project path="vendor/nxp/secure_element_extns" name="PixelExperience/vendor_nxp_secure_element_extns" revision="thirteen" remote="github" />-->
+  <!-- Tool Repos -->
+  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" clone-depth="1" />
 
-  <!-- Vendor (Qcom) repos -->
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="evo" />
-  <!--<project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="evo" />-->
-  <project path="vendor/qcom/opensource/display" name="vendor_qcom_opensource_display" remote="evo" />
+  <!-- Vendor repos - QCOM -->
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="pixel" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="vendor_qcom_opensource_audio-hal_st-hal" remote="pixel" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal-ar" name="vendor_qcom_opensource_audio-hal_st-hal-ar" remote="pixel" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_commonsys-intf_display" remote="pixel" />
+  <project path="vendor/qcom/opensource/commonsys/display" name="vendor_qcom_opensource_commonsys_display" remote="pixel" />
+  <project path="vendor/qcom/opensource/core-utils" name="vendor_qcom_opensource_core-utils" remote="pixel" />
+  <project path="vendor/qcom/opensource/core-utils-sys" name="vendor_qcom_opensource_core-utils-sys" remote="pixel" />
+  <project path="vendor/qcom/opensource/core-utils-vendor" name="vendor_qcom_opensource_core-utils-vendor" remote="pixel" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="pixel" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um" remote="pixel" />
+  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="pixel" />
+  <project path="vendor/qcom/opensource/display" name="vendor_qcom_opensource_display" remote="pixel" />
+  <project path="vendor/qcom/opensource/commonsys/dpm" name="vendor_qcom_opensource_commonsys_dpm" remote="pixel" />
+  <project path="vendor/qcom/opensource/fm-commonsys" name="vendor_qcom_opensource_fm-commonsys" remote="pixel" />
+  <project path="vendor/qcom/opensource/healthd-ext" name="vendor_qcom_opensource_healthd-ext" remote="pixel" />
+  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="pixel" />
+  <project path="vendor/qcom/opensource/libfmjni" name="vendor_qcom_opensource_libfmjni" remote="pixel" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="vendor_qcom_opensource_thermal-engine" remote="pixel" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" remote="pixel" />
+  <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="pixel" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="pixel" />
+  <project path="vendor/qcom/opensource/wfd-commonsys" name="vendor_qcom_opensource_wfd-commonsys" remote="pixel" />
 </manifest>
