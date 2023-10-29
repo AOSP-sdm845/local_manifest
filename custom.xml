@@ -118,6 +118,8 @@
 
   <!-- Device Repos -->
   <project path="device/custom/sepolicy" name="AOSP-sdm845/device_custom_sepolicy" revision="14" remote="github" />
+  <project path="device/oneplus/fajita" name="AOSP-sdm845/device_oneplus_fajita" revision="14" remote="github" />
+  <project path="device/oneplus/sdm845-common" name="AOSP-sdm845/device_oneplus_sdm845-common" revision="14" remote="github" />
   <project path="device/qcom/sepolicy" name="AOSP-sdm845/device_qcom_sepolicy" revision="14" remote="github" />
   <project path="device/qcom/sepolicy_vndr-legacy-um" name="AOSP-sdm845/device_qcom_sepolicy_vndr-legacy-um" revision="14" remote="github" />
 
@@ -153,6 +155,7 @@
   <project path="hardware/interfaces" name="AOSP-sdm845/hardware_interfaces" revision="14" remote="github" />
   <project path="hardware/libhardware" name="AOSP-sdm845/hardware_libhardware" revision="14" remote="github" />
   <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
+  <project path="hardware/oneplus" name="AOSP-sdm845/hardware_oneplus" revision="14" remote="github" />
   <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="pixel">
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
@@ -172,6 +175,9 @@
   <project path="hardware/qcom-caf/thermal" name="hardware_qcom-caf_thermal" remote="pixel" />
   <project path="hardware/qcom-caf/vr" name="hardware_qcom-caf_vr" remote="pixel" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="pixel" />
+
+  <!-- Kernel repos -->
+  <project path="kernel/oneplus/sdm845" name="AOSP-sdm845/android_kernel_oneplus_sdm845" revision="lineage-20" remote="github" clone-depth="1" />
 
   <!-- Framework repos -->
   <project path="frameworks/base" name="AOSP-sdm845/frameworks_base" revision="14" remote="github" />
@@ -223,4 +229,8 @@
   <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" remote="pixel" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" remote="pixel" />
   <project path="vendor/qcom/opensource/wfd-commonsys" name="vendor_qcom_opensource_wfd-commonsys" remote="pixel" />
+
+  <!-- Vendor repos - OnePlus -->
+  <project path="vendor/oneplus/fajita" name="AOSP-sdm845/vendor_oneplus_fajita" revision="14" remote="github" />
+  <project path="vendor/oneplus/sdm845-common" name="AOSP-sdm845/vendor_oneplus_sdm845-common" revision="14" remote="github" />
 </manifest>
