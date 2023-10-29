@@ -198,7 +198,7 @@
   <project path="system/sepolicy" name="AOSP-sdm845/system_sepolicy" revision="14" remote="github" />
 
   <!-- Tool Repos -->
-  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" clone-depth="1" />
+  <project path="tools/extract-utils" name="tools_extract-utils" remote="pixel" clone-depth="1" />
 
   <!-- Vendor repos - QCOM -->
   <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="pixel" />
