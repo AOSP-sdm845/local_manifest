@@ -127,6 +127,7 @@
   <project path="external/ant-wireless/ant_service" name="external_ant-wireless_ant_service" remote="pixel" />
   <project path="external/ant-wireless/hidl" name="external_ant-wireless_hidl" remote="pixel" />
   <project path="external/cronet" name="external_cronet" remote="pixel" />
+  <project path="external/external_ntfs-3g" name="AOSP-11/external_ntfs-3g" revision="11" remote="github" />
   <project path="external/json-c" name="external_json-c" remote="pixel" />
   <project path="external/tinyxml" name="external_tinyxml" remote="pixel" />
 
