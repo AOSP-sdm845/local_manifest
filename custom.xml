@@ -6,7 +6,7 @@
 
   <remote name="lineage"
           fetch="https://github.com/LineageOS"
-          revision="lineage-20.0" />
+          revision="lineage-21.0" />
 
   <remote name="evo"
            fetch="https://github.com/Evolution-X"
