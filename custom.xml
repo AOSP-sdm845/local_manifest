@@ -112,6 +112,7 @@
   <!-- System Repos -->
   <remove-project name="platform/system/bpf" />
   <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/libhidl" />
   <remove-project name="platform/system/vold" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/system/sepolicy" />
@@ -199,6 +200,7 @@
   <!-- System Repos -->
   <project path="system/bpf" name="AOSP-sdm845/system_bpf" revision="14" remote="github" />
   <project path="system/core" name="AOSP-sdm845/system_core" revision="14" remote="github" />
+  <project path="system/libhidl" name="AOSP-sdm845/system_libhidl" revision="14" remote="github" />
   <project path="system/vold" name="AOSP-sdm845/system_vold" revision="14" remote="github" />
   <project path="system/security" name="AOSP-sdm845/system_security" revision="14" remote="github" />
   <project path="system/sepolicy" name="AOSP-sdm845/system_sepolicy" revision="14" remote="github" />
