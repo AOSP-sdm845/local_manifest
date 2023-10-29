@@ -175,7 +175,7 @@
   <project path="hardware/qcom-caf/bootctrl" name="hardware_qcom-caf_bootctrl" remote="pixel" />
   <project path="hardware/qcom-caf/thermal" name="hardware_qcom-caf_thermal" remote="pixel" />
   <project path="hardware/qcom-caf/vr" name="hardware_qcom-caf_vr" remote="pixel" />
-  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="pixel" />
+  <project path="hardware/qcom-caf/wlan" name="AOSP-sdm845/hardware_qcom-caf_wlan" revision="14" remote="github" />
 
   <!-- Kernel repos -->
   <project path="kernel/oneplus/sdm845" name="AOSP-sdm845/android_kernel_oneplus_sdm845" revision="lineage-20" remote="github" clone-depth="1" />
